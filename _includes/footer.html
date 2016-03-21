@@ -1,27 +1,131 @@
-<!-- Footer -->
-<footer id="footer">
-  <ul class="icons">
-    {% for socloc in site.social %}
-    {% if socloc[1] %}
-    {% if socloc[0] == 'email' %}
-    <li><a target="_blank" href="{{ socloc[1] }}" class="icon fa-envelope-o"
-           ><span class="label">E-mail</span></a></li>
-    {% else %}
-    <li><a target="_blank" href="{{ socloc[1] }}" class="icon fa-{{ socloc[0] }}"
-           ><span class="label">{{ socloc[0] }}</span></a></li>
-    {% endif %}
-    {% endif %}
-    {% endfor %}
-  </ul>
-  <ul class="copyright">
-    <li>&copy; {% assign thisyear = site.time | date: "%Y" %}
-    {% if site.first_published %}
-      {% capture diff %}{{ site.first_published | minus:thisyear }}{% endcapture %}
-      {% if diff contains '-' %}{{ site.first_published }},{% endif %}
-    {% endif %}
-    {{ thisyear }}
-    {% if site.owner %}{{ site.owner }}{% else %}{{ site.title }}{% endif %}</li>
-    <li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
-    <li>Built with: <a href="http://jekyllrb.com" target="_blank">Jekyll</a></li>
-  </ul>
+<footer class="site-footer">
+  <div class="wrapper">
+    <h2 class="footer-heading">{{ site.title }}</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Spaghetti-san Personal Blog</li>
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          {% if site.github_username %}
+          <li>
+            {% include icon-github.html username=site.github_username %}
+          </li>
+          {% endif %}
+          
+          {% if site.facebook_username %}
+          <li>
+            {% include icon-facebook.html username=site.facebook_username %}
+          </li>
+          {% endif %}
+
+          {% if site.twitter_username %}
+          <li>
+            {% include icon-twitter.html username=site.twitter_username %}
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+      <div class="footer-col footer-col-3">
+        <p>Designed by Spaghetti</p>
+        <p>Proudly hosted by <a href="https://pages.github.com/" target="_blank"><span class="octicon octicon-logo-github" style="color: #828282;
+    position: relative;
+    top: 4px;
+    left: 3px;
+    font-size: 20px;"></span></a></p>
+      </div>
+    </div>
+  </div>
 </footer>
+<!--- Where Javascript Loaded --->
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-pjax.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-preload.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-tooltipster.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-autocomplete.js"></script>
+<script type="text/javascript" src="/assets/js/responsive_waterfall.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+<script id="dsq-count-scr" src="//spaghettisan.disqus.com/count.js" async></script>
+<script>
+$.preload({
+    forward: $.pjax.follow,
+    check: $.pjax.getCache,
+    encode: !1,
+    ajax: {
+        success: function(e, a, c) {
+            !$.pjax.getCache(this.url) && $.pjax.setCache(this.url, null, a, c)
+        }
+    }
+}), $.pjax({
+    area: "body",
+    load: {
+        head: "base, meta, link",
+        css: !0,
+        script: !0
+    },
+    cache: {
+        click: !1,
+        submit: !1,
+        popstate: !1
+    },
+    speedcheck: !1
+}), $(document).bind("pjax:ready", function() {
+    setTimeout(function() {
+        $(document).trigger("preload")
+    }, 2e3)
+});
+$(document).ready(function() {
+    "/" != location.pathname ? $('.trigger a[href^="/' + location.pathname.split("/")[1] + '"]').addClass("active") : $(".none a:eq(0)").addClass("active")
+}), $(document).ready(function() {
+    $(".tooltip-right").tooltipster({
+        contentAsHTML: !0,
+        position: "right"
+    })
+}), $(document).ready(function() {
+    $(".tooltip-left").tooltipster({
+        contentAsHTML: !0,
+        position: "left"
+    })
+});
+$(document).ready(function() {
+    $(".menu-icon").click(function() {
+        $(".trigger").toggle()
+    })
+}), Pace.on("done", function() {
+    $(".pacel").hide()
+}), $(function() {
+    $("img").lazyload({})
+});
+var options = {
+    url: "/gblk.json",
+    getValue: "title",
+    list: {
+        match: {
+            enabled: !0,
+            maxNumberOfElements: 5
+        }
+    },
+    template: {
+        type: "links",
+        fields: {
+            link: "url"
+        }
+    },
+    theme: "square"
+};
+$("#countries").easyAutocomplete(options);
+var waterfall = new Waterfall({
+    containerSelector: ".wf-container",
+    boxSelector: ".wf-box",
+    minBoxWidth: 180
+});
+$(document).ready(function() {
+    $(".menu-icon").click(function() {
+        $(".trigger").toggle()
+    })
+});
+</script>
