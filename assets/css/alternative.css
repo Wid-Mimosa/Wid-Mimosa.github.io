@@ -26,7 +26,7 @@ figure {
 body {
     font: 400 16px/1.5 gidole;
     color: #000;
-    background-color: #5a91cb;
+    background-color: #ABD1DC;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
@@ -85,7 +85,7 @@ h6 {
 }
 
 a {
-    color: #0ce3ac;
+    color: #005DAF;
     text-decoration: none;
 }
 
@@ -213,7 +213,7 @@ pre>code {
         padding-bottom: 0;
         /* border-bottom: #636363 1px solid; */
         word-wrap: break-word;
-        background: #9CFE9A;
+        background: #F7EAD7;
         /* padding: 20px; */
     }
     .home {
@@ -262,14 +262,14 @@ ul {
     content: "";
     width: 7px;
     height: 7px;
-    border: #00bc8c 1px solid;
+/*   border: #00bc8c 1px solid;*/
     position: absolute;
     bottom: 43px;
     left: 50%;
     margin-left: -5px;
-    background: #138668;
+    background: #C6A477;
     border-radius: 100%;
-    box-shadow: #00bc8c 0 0 0 5px;
+    box-shadow: #FFE761 0 0 0 5px;
 }
 
 .tags li {
@@ -362,10 +362,10 @@ ul {
 .pagination span,
 .pagination a {
     font-size: 16px;
-    background: #00bc8c;
+    background: #F7EAD7;
     padding: 5px 15px;
     /* border-radius: 3px; */
-    color: #969696;
+    color: #555555;
 }
 
 .pagination span.previous,
@@ -386,13 +386,13 @@ ul {
 .site-header {
     height: 50px;
     position: relative;
-    background: #A925B9;
+    background: #C6A477;
     position: fixed;
     margin-bottom: 54px;
     top: 0;
     z-index: 2000;
     width: 100%;
-    border-bottom: 2px solid #1D344C;
+    border-bottom: 2px solid #EED7A3;
 }
 
 .site-title {
@@ -455,14 +455,14 @@ ul {
     background: #1F3F61;
 }
 .easy-autocomplete input {
-    border-color: #3E3E3E;
+    border-color: #ABD1DC;
     border-style: solid;
     border-width: 1px;
     color: #555;
     float: none;
     padding: 6px 12px;
     min-width: 293px;
-    background-color: #3E3E3E;
+    background-color: #D3E7EE;
     color: #fff;
     padding: 0 0px 12px 0px;
     outline: none;
@@ -653,7 +653,7 @@ ul {
 
 .page-content {
     padding-bottom: 30px;
-    background: #83AFE0;
+    background: #D3E7EE;
     margin-top: 45px;
 }
 
@@ -662,8 +662,8 @@ ul {
     /* border-bottom: 1px solid transparent; */
     /* border-top-right-radius: 3px; */
     /* border-top-left-radius: 3px; */
-    color: #ffffff;
-    background-color: #375a7f;
+    color: #005DAF;
+    background-color: #EED7A3;
     /* border-color: #375a7f; */
     /* margin-top: 20px; */
     height: 31px;
@@ -1400,7 +1400,7 @@ ul {
 .widgetnya {
     display: inline-table;
     width: 100%;
-    background: #4075B1;
+    background: #F7EAD7;
     margin-top: 30px;
 }
 

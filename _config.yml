@@ -6,18 +6,19 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Spaghetti-san Blog
-email: spaghettisan@yahoo.com
+title: NaX&CC
+email: widstayfoolish@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   All about Spaghetti-san Project
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://spaghetti.ga" # the base hostname & protocol for your site
+url: "http://wid.com" # the base hostname & protocol for your site
 twitter_username: axlyody
-github_username:  spaghetti-san
+github_username:  WID
 facebook_username:  axlyody
+weibo_name: 爱僵尸的吐槽粉
 
 # Gems
-gems: 
+gems:
 - jekyll-archives
 - jekyll-paginate
 
