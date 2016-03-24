@@ -4,4 +4,4 @@ Personal Blog
 MIT
 
   Using this blog for write some article about studying and my understanding
-and painting.
+of painting.
