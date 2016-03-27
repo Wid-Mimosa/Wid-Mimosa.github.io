@@ -26,7 +26,9 @@ gems:
 paginate: 5
 paginate_path: "page/:num"
 # Build settings
-markdown: kramdown
+kramdown:
+  input: GFM
+highlight: pygments
 
 # Archive
 jekyll-archives:

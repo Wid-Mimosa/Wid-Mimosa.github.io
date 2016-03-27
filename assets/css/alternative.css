@@ -25,7 +25,7 @@ figure {
 
 body {
     font: 400 16px/1.5 gidole;
-    color: #000;
+    color: hsl(0, 0%, 0%);
     background-color: #ABD1DC;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
@@ -33,7 +33,7 @@ body {
     -o-font-feature-settings: "kern" 1;
     font-feature-settings: "kern" 1;
     font-kerning: normal;
-}
+}7
 
 h1,
 h2,
@@ -106,8 +106,9 @@ blockquote>:last-child {
 
 pre,
 code {
+    color:
     font-size: 15px;
-    background-color: #222;
+    background-color: #E8F706;
 }
 
 code {
@@ -476,14 +477,15 @@ ul {
 }
 
 .inpost-header {
-    background: #00bc8c;
+    background: #EED7A3;
     padding: 15px 20px 20px 20px;
     height: 30px;
 }
 .inpost-title {
-        font-size: 25px;
+    font-size: 25px;
     letter-spacing: -1px;
     float: left;
+    color: #005DAF;
 }
 .comment-postingatas {
     position: relative;
