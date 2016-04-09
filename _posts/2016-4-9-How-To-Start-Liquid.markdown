@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "怎样使用Liquid模板语言"
-date:   2016-04-09 22:58:04
+title:  "Liquid模板语言的使用"
+date:   2016-03-27 22:58:04
 categories: jekyll
 tags: jekyll
 ---
