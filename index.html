@@ -1,88 +1,108 @@
 ---
-layout: default
+title: 404
+exclude_from_nav: true
 ---
 
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Error!</title>
+    <style>
+      html {
+  font-size: 62.5%;
+}
 
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
+body {
+  padding: 60px;
+  background: #fafafa;
+  font-size: 150%;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+}
 
-<div class="row">
+#wrap {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  border-top: 3px solid #b00f08;
+}
 
+hr {
+  display: none;
+}
 
+p {
+  margin: 0 0 15px;
+}
 
+a {
+  color: #731217;
+}
 
+a:hover {
+  color: #b00f08;
+}
 
+h1 {
+  margin: 0 0 15px;
+  font-size: 240%;
+  font-weight: 300;
+  color: #731217;
+}
 
-<div class="large-7 columns samping">
+.content {
+  padding: 15px;
+  margin: 15px 0;
+  background: #eee;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  color: #666;
+}
 
-    {% for post in paginator.posts %}
-     <article class="post tag-speeches">
-         <div style="padding: 20px;">
-    <header class="post-header">
-        <h2 class="post-title"><a id="route" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>{{ post.content | strip_html | truncatewords:45}} <a id="route" class="read-more" href="{{ post.url | prepend: site.baseurl }}">»</a></p>
-    </section>
+pre {
+  overflow: auto;
+  padding: 15px;
+  background: #fafafa;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  line-height: 1.8;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+pre.exception {
+  background-color: #ffeded;
+}
+
+pre em {
+  font-style: normal;
+  color: rgba(0, 0, 0, 0.5);
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <h1>Sorry !</h1>
+      <p>The page went to the moon !!</p>
+
+   
+    
+
 
     </div>
-    <footer class="post-meta" style="    background: #EED7A3;
-    padding: 10px 0 0px 20px;">
-
-
-        <p class="post-tags"><i class="typico typcn typcn-tags" style="    font-size: 28px;
-    position: relative;
-    top: 1px;
-    font-size:15px"></i> {% include post-tags.html %}</p>
-        <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}" style="color:#fff;"><i class="typico typcn typcn-calendar-outline" style="    font-size: 28px;
-    position: relative;
-    top: 1px;
-    font-size:15px"></i> {{ post.date | date: "%b %-d, %Y" }}</time>
-        <p class="post-date"><i class="typico typcn typcn-messages" style="    font-size: 28px;
-    position: relative;
-    top: 1px;
-    font-size:15px"></i> <a id="route" class="disqus-comment-count"  href="{{ post.url | prepend: site.baseurl }}#disqus_thread" style="color:#fff"> 0 Comments</a></p>
-    </footer>
-</article>
-    {% endfor %}
-
-
-  <!-- Pagination links -->
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a id="route" href="{{ paginator.previous_page_path }}" class="previous"><i class="typcn typcn-chevron-left-outline" style="    font-size: 14px;
-    position: relative;
-
-    "></i> Previous</a>
-  {% else %}
-    <span class="previous" align="left"><i class="typcn typcn-chevron-left-outline" style="    font-size: 14px;
-    position: relative;
-
-    "></i> Previous</span>
-  {% endif %}
-
-  {% if paginator.next_page %}
-    <a id="route" href="{{ paginator.next_page_path }}" class="next">Next <i class="typcn typcn-chevron-right-outline" style="    font-size: 14px;
-    position: relative;
-
-    "></i></a>
-  {% else %}
-    <span class="next" align="right">Next <i class="typcn typcn-chevron-right-outline" style="    font-size: 14px;
-    position: relative;
-
-    "></i></span>
-  {% endif %}
-</div>
-
-
-
-
-
-
-</div>
-
-
-{% include widgets.html %}
-
-
-</div>
-</div>
+  </body>
+</html>
